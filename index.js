@@ -97,14 +97,8 @@ async function handleUnfriending() {
 async function handleUnfollowing() {
   console.clear();
 
-  const { count: followerCount } = await utils.getFollowingCount(
-    id,
-    authorization
-  );
-  const { data: followingList } = await utils.getfollowingList(
-    id,
-    authorization
-  );
+  const { count: followerCount } = await utils.getFollowingCount(id, authorization);
+  const { data: followingList } = await utils.getfollowingList(id, authorization);
 
   console.log(`Total Following: ${followerCount}`);
   await settings.sleep(1000);
@@ -171,21 +165,15 @@ async function handleLeavingGroups() {
 async function handleWipeAll() {
   console.clear();
 
-  //Friend Api
+
   const { count: friendCount } = await utils.getFriendCount(authorization);
   const { data: friendList } = await utils.getFriendList(id, authorization);
 
-  //Follower Api callback
-  const { count: followerCount } = await utils.getFollowingCount(
-    id,
-    authorization
-  );
-  const { data: followingList } = await utils.getfollowingList(
-    id,
-    authorization
-  );
 
-  // Group Api Callback
+  const { count: followerCount } = await utils.getFollowingCount(id, authorization);
+  const { data: followingList } = await utils.getfollowingList(id, authorization);
+
+
   const { data: groupList } = await utils.getGroupList(id, authorization);
   const groupCount = groupList.length;
 
@@ -201,9 +189,9 @@ async function handleWipeAll() {
   }
 
   const processSpeed = await prompt("Enter speed wanted (ms): ");
+  console.clear();
 
   // Unfriending
-  console.clear();
   if (friendCount !== 0) {
     for (const friend of friendList) {
       const { statusCode } = await utils.unfriendUser(friend.id, authorization);

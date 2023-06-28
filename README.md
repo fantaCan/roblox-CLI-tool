@@ -1,4 +1,4 @@
-# Roblox Account Wiper
+# Roblox CLI
 
 
 ### Installation
@@ -19,8 +19,8 @@
 
 ## Additional Information
 
-- This project was just created for fun and it's not meant to be something i spent lots of my time on
-- If you do happen to come across any bugs, feel free to contact me via discord at mort1400
+- This project was created for personal enjoyment and is not intended to be a significant time investment.
+- The primary objective of this project is to assist users in effortlessly wiping Roblox accounts, without having to manually do it.
 
 
 ## Developer

@@ -211,7 +211,7 @@ async function handleWipeAll() {
   }
 
   // Unfollowing
-  if (!followerCount !== 0) {
+  if (followerCount !== 0) {
     for (const following of followingList) {
       const { statusCode } = await utils.unfollowUser(
         following.id,

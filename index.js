@@ -1,6 +1,6 @@
-import readline from "node:readline"; // Importing the 'readline' module from Node.js
-import utils from "./src/src.js"; // Importing utility functions from './src/src.js'
-import settings from "./CLI/cli.settings.js"; // Importing settings from './CLI/cli.settings.js'
+import readline from "node:readline";
+import utils from "./src/src.js"; 
+import settings from "./CLI/cli.settings.js"; 
 
 //Globals
 let processSpeed;
